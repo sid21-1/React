@@ -1,9 +1,14 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Header from "@/Components/Header";
+
 const page = () => {
+  const [user, setUser] = useState("Siddhanth");
+  const [edit, setedit] = useState("Gupta");
   return (
     <>
-      <Header />
+      <Header user={user} edit={edit} />
       <div>page</div>
     </>
   );
