@@ -1,20 +1,42 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import Header from "@/Components/Header";
-
 const page = () => {
-  const [user, setUser] = useState("Siddhanth");
-  const [edit, setedit] = useState("Gupta");
   return (
-    <>
-      <Header user={user} edit={edit} />
-      <div>page</div>
-    </>
+    <div>
+      <Header />
+      <h1 className=" font-bold ">This is home page</h1>
+      {/* 
+      <a href="/About" className=' px-2'>About</a>
+      <a href="/Home" className=' px-2'>Home</a>
+      <a href="/Section" className=' px-2'>Section</a>
+      <a href="" className=' px-2'>Contact Section</a> */}
+    </div>
   );
 };
 
 export default page;
+
+//PROPS CONCEPT
+
+// "use client";
+
+// import React, { useState } from "react";
+// import Header from "@/Components/Header";
+
+// const page = () => {
+//   const [user, setUser] = useState("Siddhanth");
+//   const [edit, setedit] = useState("Gupta");
+//   return (
+//     <>
+//       <Header user={user} edit={edit} />
+//       <div>page</div>
+//     </>
+//   );
+// };
+
+// export default page;
+
+//USE STATE
 
 // "use client";
 // import React, { useState } from "react";
