@@ -1,9 +1,7 @@
 import React from "react";
-import Header from "@/Components/Header";
 const page = () => {
   return (
     <div>
-      <Header />
       <h1 className=" font-bold ">This is home page</h1>
       {/* 
       <a href="/About" className=' px-2'>About</a>
