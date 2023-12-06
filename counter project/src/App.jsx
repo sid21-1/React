@@ -8,8 +8,12 @@ function App() {
   // let counter = 5;
   const addValue = () => {
     if (counter < 20) {
-      counter = counter + 1;
-      setCounter(counter);
+      // setCounter(counter + 1);
+      // setCounter(counter + 1);
+      // setCounter(counter + 1);
+      setCounter((prevcounter)=>prevcounter +1)
+      setCounter((prevcounter)=>prevcounter +1)
+      setCounter((prevcounter)=>prevcounter +1)
     } else {
       console.log("you cannot add more values to it");
     }
