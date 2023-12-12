@@ -7,22 +7,18 @@ import Receipe from "./components/Receipe";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-
 const App = () => {
   return (
     <>
-    <div className=" bg-back">
-    <Header/>
-    {/* <NavIcon/>
-    <Home/>
+      <div className=" bg-back">
+        <Header />
+        <NavIcon />
+        {/* <Home/>
     <About/>
     <Receipe/>
     <Contact/>
     <Footer/> */}
-
-
-    </div>
-      
+      </div>
     </>
   );
 };

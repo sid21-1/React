@@ -3,7 +3,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 const Header = () => {
   return (
     <div className=" fixed top-0 left-0 w-full z-20">
-      <nav className="relative container max-auto flex items-center justify-between py-4 px-2">
+      <nav className="relative container mx-auto flex items-center justify-between py-4 px-2">
         <div>
           <h4 className="text-xl font-semibold">Taste</h4>
           <span className=" text-[0.75rem] font-bold opacity-70">
