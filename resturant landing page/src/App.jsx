@@ -11,14 +11,14 @@ import Footer from "./components/Footer";
 const App = () => {
   return (
     <>
-    <div className="">
+    <div className=" bg-back">
     <Header/>
-    <NavIcon/>
+    {/* <NavIcon/>
     <Home/>
     <About/>
     <Receipe/>
     <Contact/>
-    <Footer/>
+    <Footer/> */}
 
 
     </div>
