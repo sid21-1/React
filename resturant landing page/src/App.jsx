@@ -13,8 +13,8 @@ const App = () => {
       <div className=" bg-back">
         <Header />
         <NavIcon />
-        {/* <Home/>
-    <About/>
+        <Home/>
+    {/* <About/>
     <Receipe/>
     <Contact/>
     <Footer/> */}
