@@ -15,8 +15,8 @@ const App = () => {
         <NavIcon />
         <Home />
         <About />
-        {/* <Receipe/>
-    <Contact/>
+        <Receipe />
+        {/* <Contact/>
     <Footer/> */}
       </div>
     </>
