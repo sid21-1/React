@@ -13,9 +13,9 @@ const App = () => {
       <div className=" bg-back">
         <Header />
         <NavIcon />
-        <Home/>
-    {/* <About/>
-    <Receipe/>
+        <Home />
+        <About />
+        {/* <Receipe/>
     <Contact/>
     <Footer/> */}
       </div>
