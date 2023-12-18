@@ -75,12 +75,12 @@ export const footerContacts = [
   {
     id: 2,
     icon: <HiOutlineMail />,
-    text: "abee2002@gmail.com",
+    text: "happy@gmail.com",
   },
   {
     id: 3,
     icon: <BiMap />,
-    text: "16 Road TharkayTha,Yangon",
+    text: "HD lama road darjeeling",
   },
 ];
 
