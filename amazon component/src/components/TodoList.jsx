@@ -17,7 +17,18 @@ const TodoList = () => {
   };
 
   let deleteTodo = (id) => {
-    setTodos((prevTodos)=>todos.filter((prevTodos) => prevTodos.id != id));
+    setTodos((prevTodos) => todos.filter((prevTodos) => prevTodos.id != id));
+  };
+
+  let upperCaseAll = () => {
+    setTodos((todos) =>
+      todos.map((todo) => {
+        return {
+          ...todo,
+          task: todo.task.toUpperCase(),
+        };
+      })
+    );
   };
 
   return (
@@ -46,6 +57,9 @@ const TodoList = () => {
           </li>
         ))}
       </ul>
+      <br />
+      <br />
+      <button onClick={upperCaseAll}>UpperCase All</button>
     </div>
   );
 };
