@@ -9,9 +9,9 @@ function App() {
 
   return (
     <>
-      {/* <Lottery/> */}
+      <Lottery n={3} winningSum={15}/>
       {/* <TicketNum num={5}/> */}
-      <Ticket ticket={[0, 1, 2]} />
+      {/* <Ticket ticket={[0, 1, 2]} /> */}
     </>
   );
 }
