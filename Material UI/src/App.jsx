@@ -1,4 +1,5 @@
 import "./App.css";
+import InfoBox from "./InfoBox";
 import SearchBox from "./SearchBox";
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
   };
   return (
     <>
-    <SearchBox/>
+      <SearchBox />
+      <InfoBox />
       {/* <h3>Material UI</h3>
       <Button
         variant="contained"
