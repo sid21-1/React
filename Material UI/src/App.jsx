@@ -1,6 +1,7 @@
 import "./App.css";
 import InfoBox from "./InfoBox";
 import SearchBox from "./SearchBox";
+import WeatherApp from "./WeatherApp";
 
 function App() {
   const handleClick = () => {
@@ -8,8 +9,9 @@ function App() {
   };
   return (
     <>
-      <SearchBox />
-      <InfoBox />
+      {/* <SearchBox /> */}
+      <WeatherApp/>
+      {/* <InfoBox /> */}
       {/* <h3>Material UI</h3>
       <Button
         variant="contained"
