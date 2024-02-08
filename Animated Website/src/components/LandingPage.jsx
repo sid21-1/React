@@ -8,7 +8,9 @@ const LandingPage = () => {
           return (
             <div className="masker">
               <div className="w-fit flex overflow-hidden">
-                {index ===1 && (<div className="w-[9vw] h-[5vw] rounded-md bg-red-500 relative  top-5"></div>)}
+                {index === 1 && (
+                  <div className="w-[9vw] h-[5vw] rounded-md bg-red-500 relative  top-5"></div>
+                )}
                 <h1 className="uppercase text-[7.5vw] tracking-tighter  leading-[6.5vw]  font-medium ">
                   {item}
                 </h1>
