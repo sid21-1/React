@@ -1277,7 +1277,7 @@ const ResturantCard = (props) => {
         className="res-logo"
         src={
           "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
-          resData.data.cloudinaryImageId
+          cloudinaryImageId
         }
       />
       <h4>{name}</h4>
@@ -1293,13 +1293,9 @@ const Body = () => {
     <div className="body">
       <div className="search">Search</div>
       <div className="resturant-container">
-        {/* resturant card */}
-        <ResturantCard resData={restrautList[0]} />
-        <ResturantCard resData={restrautList[1]} />
-        <ResturantCard resData={restrautList[2]} />
-        <ResturantCard resData={restrautList[3]} />
-        <ResturantCard resData={restrautList[4]} />
-        {/* <ResturantCard resName="KFC" cuisine="chicken" /> */}
+        {restrautList.map((restraut) => (
+          <ResturantCard key={restraut.data.id} resData={restraut} />
+        ))}
       </div>
     </div>
   );
