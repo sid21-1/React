@@ -1,4 +1,4 @@
-const restrautList = [
+let restrautList = [
   {
     type: "restaurant",
 
