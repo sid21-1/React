@@ -1,9 +1,22 @@
 import ResturantCard from "./ResturantCard";
 import restrautList from "../utils/mockdata";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Shimmer from "./Shimmer";
 const Body = () => {
-  const [list, setList] = useState(restrautList);
-  return (
+  const [list, setList] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      setList(restrautList);
+      setIsLoading(false);
+    }, 2000);
+    return () => clearTimeout(delay);
+  }, []);
+
+  return list.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="filter">
         <button
