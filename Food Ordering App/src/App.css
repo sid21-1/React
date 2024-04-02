@@ -69,3 +69,10 @@
 .filter {
   display: flex;
 }
+
+
+.user-card{
+  padding: 10px;
+  margin: 0 12px;
+  border: 1px solid black;
+}
