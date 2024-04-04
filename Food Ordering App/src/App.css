@@ -1,6 +1,6 @@
-.header {
+/* .header {
   display: flex;
-  /* background-color: red; */
+  
   justify-content: space-between;
   align-items: center;
   border: 1px solid black;
@@ -9,7 +9,7 @@
 
 .body {
   padding: 0 30px;
-  /* background-color: red; */
+  
 }
 
 .logo {
@@ -75,4 +75,4 @@
   padding: 10px;
   margin: 0 12px;
   border: 1px solid black;
-}
+} */
