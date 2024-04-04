@@ -1,28 +1,12 @@
 import restrautList from "../utils/mockdata";
-import { useState, useEffect } from "react";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
-import { MENU_API } from "../utils/constants";
 
 const RestaurantMenu = () => {
-  const [resInfo, setResInfo] = useState(null);
-
   const { resId } = useParams();
 
-  useEffect(() => {
-    fetchdata();
-  }, []);
-
-  const fetchdata = async () => {
-    const data = await fetch(
-      MENU_API +
-        resId +
-        "&catalog_qa=undefined&isMenuUx4=true&submitAction=ENTER"
-    );
-    const json = await data.json();
-    // console.log(json);
-    setResInfo(json.data);
-  };
+  const resInfo = useRestaurantMenu(resId);
 
   if (resInfo === null) return <Shimmer />;
 
