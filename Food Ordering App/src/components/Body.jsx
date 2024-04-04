@@ -2,6 +2,7 @@ import ResturantCard from "./ResturantCard";
 import restrautList from "../utils/mockdata";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const [list, setList] = useState([]);
@@ -31,6 +32,10 @@ const Body = () => {
     const filterlist = restrautList.filter((res) => res.data.avgRating > 3.9);
     setFilterRestaurants(filterlist); // Update filterrestaurants state
   };
+
+  const onlineStatus = useOnlineStatus();
+
+  if (onlineStatus === false) return <h1>Looks like you are offline</h1>;
 
   return isLoading ? (
     <Shimmer />
