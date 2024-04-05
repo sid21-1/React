@@ -1,4 +1,4 @@
-import ResturantCard from "./ResturantCard";
+import ResturantCard, { withPromotedLabel } from "./ResturantCard";
 import restrautList from "../utils/mockdata";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
@@ -10,6 +10,8 @@ const Body = () => {
   const [searchtxt, setSearchTxt] = useState("");
   const [filterrestaurants, setFilterRestaurants] = useState([]);
 
+  const RestaurantCardPromoted = withPromotedLabel(ResturantCard);
+
   useEffect(() => {
     const delay = setTimeout(() => {
       setList(restrautList);
@@ -18,6 +20,7 @@ const Body = () => {
     }, 2000);
     return () => clearTimeout(delay);
   }, []);
+  // console.log(restrautList);
 
   const handleSearch = () => {
     // Filter the restaurants based on the search text
@@ -49,7 +52,10 @@ const Body = () => {
             value={searchtxt}
             onChange={(e) => setSearchTxt(e.target.value)}
           />
-          <button className="px-4 bg-green-200 m-4 rounded-sm" onClick={handleSearch}>
+          <button
+            className="px-4 bg-green-200 m-4 rounded-sm"
+            onClick={handleSearch}
+          >
             Search
           </button>
         </div>
@@ -63,9 +69,18 @@ const Body = () => {
         </div>
       </div>
       <div className="resturant-container flex flex-wrap">
-        {filterrestaurants.map((restaurant) => (
-          <ResturantCard key={restaurant.data.id} resData={restaurant} />
-        ))}
+        {filterrestaurants.map(
+          (restaurant) =>
+            restaurant.data.promoted ? (
+              <RestaurantCardPromoted
+                key={restaurant.data.id}
+                resData={restaurant}
+              />
+            ) : (
+              <ResturantCard key={restaurant.data.id} resData={restaurant} />
+            )
+          // <ResturantCard key={restaurant.data.id} resData={restaurant} />
+        )}
       </div>
     </div>
   );
