@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import ItemList from "./ItemList";
 
-const RestuarantCatagory = ({ data }) => {
-  const [showItems, setShowItems] = useState(false);
-
+const RestuarantCatagory = ({ data, showItems, setShowIndex }) => {
   const handleClick = () => {
-    setShowItems(!showItems);
+    setShowIndex();
   };
-  //   console.log(data);
   return (
     <div>
       {/* Accordian Header */}
