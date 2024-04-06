@@ -1,6 +1,7 @@
 import ResturantCard, { withPromotedLabel } from "./ResturantCard";
 import restrautList from "../utils/mockdata";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import UserContext from "../utils/UserContext";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/useOnlineStatus";
 
@@ -40,6 +41,8 @@ const Body = () => {
 
   if (onlineStatus === false) return <h1>Looks like you are offline</h1>;
 
+  const { loggedInUser, setUserName } = useContext(UserContext);
+
   return isLoading ? (
     <Shimmer />
   ) : (
@@ -66,6 +69,17 @@ const Body = () => {
           >
             Top Rated Restaurants
           </button>
+        </div>
+        <div className="search m-4 p-4">
+          <label htmlFor="">User Name : </label>
+          <input
+            type="text"
+            className="border border-black p-2"
+            value={loggedInUser}
+            onChange={(e) => {
+              setUserName(e.target.value);
+            }}
+          />
         </div>
       </div>
       <div className="resturant-container flex flex-wrap">
